@@ -1,0 +1,23 @@
+.search-results-box {
+  padding-inline: clamp(0.5rem, 0.2159rem + 1.2121vw, 1.125rem);
+  background: linear-gradient(90deg, var(--color-dark-700) 17px, transparent 1%)
+      50%,
+    linear-gradient(var(--color-dark-700) 17px, transparent 1%) 50%,
+    var(--color-dark-500);
+  background-size: 18px 18px;
+  border-radius: var(--radius);
+  height: 80vh;
+  padding-bottom: 0.25rem;
+  overflow-y: scroll;
+  /* Tar bort scrollbars, UI cleanare :) UX sämre :( */
+
+  /* -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  } */
+
+  @media (max-width: 768px) {
+    height: 60vh;
+  }
+}
