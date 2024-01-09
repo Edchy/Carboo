@@ -74,8 +74,12 @@ export default function SlideUp({
   }, [isShowing, speechBubbleText]);
 
   return (
-    //e class baserat på state
-    <div className={`slide-up ${isShowing ? "visible" : ""}`}>
+    //class baserat på state
+    <div
+      className={`slide-up ${
+        isShowing ? "visible" : slideUpIsAlreadyShown ? "hide" : ""
+      }`}
+    >
       <div className={`speech-bubble ${isShowing ? "fade-in" : "fade-out"}`}>
         {/* rendera meddelande baserat på index i array */}
         {messages[speechBubbleText]}

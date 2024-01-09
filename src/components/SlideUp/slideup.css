@@ -98,3 +98,7 @@
 .slide-up.visible {
   bottom: 0px;
 }
+
+.slide-up.hide {
+  display: none;
+}
