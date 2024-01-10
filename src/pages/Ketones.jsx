@@ -1,4 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
+import { PageNavButton } from "../components/Button/Button";
+
 function Ketones() {
   return (
     <section className="page">
@@ -51,6 +53,10 @@ function Ketones() {
         your blood sugar levels under control, check for ketones, and stay in
         regular contact with your healthcare team to stay healthy and safe.
       </p>
+      <nav className="page-nav-buttons">
+        <PageNavButton path={-1} />
+        <PageNavButton path="/" title="home" />
+      </nav>
     </section>
   );
 }

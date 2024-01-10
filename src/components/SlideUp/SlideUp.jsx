@@ -91,9 +91,7 @@ export default function SlideUp({
       role="dialog"
       aria-modal="true"
       aria-label="Pop-up with information about how to use the app"
-      className={`slide-up ${
-        isShowing ? "visible" : /*slideUpIsAlreadyShown ? "hide" :*/ "" //Fixa detta!
-      }`}
+      className={`slide-up ${isShowing ? "visible" : ""}`}
     >
       <div className={`speech-bubble ${isShowing ? "fade-in" : "fade-out"}`}>
         {/* rendera meddelande baserat på index i array */}

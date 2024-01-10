@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { MdPlaylistAddCircle } from "react-icons/md";
+import { PageNavButton } from "../components/Button/Button";
 import { Link } from "react-router-dom";
 
 function HowToUse() {
@@ -55,6 +56,18 @@ function HowToUse() {
         be anything really). Always double check the results from a reliable
         source like the <a href="https://usda.gov">USDA</a>.
       </p>
+      <div className="page-note">
+        <p style={{ fontWeight: "bold", textAlign: "center" }}>Important!</p>
+        <p>
+          Please be aware that all the food items and nutritional information
+          displayed in our results refer to foods that have been cooked or
+          prepared in various ways. This means that the data you see is not for
+          the raw, uncooked versions of these foods. Cooking methods such as
+          boiling, baking, frying, or grilling can alter the nutritional content
+          and weight of food, so it's important to consider this when assessing
+          your dietary intake.
+        </p>
+      </div>
       <p>
         <strong>Also Note!</strong> If you want to add liquids to your meal (for
         example Milk🥛 or Fanta🥤), you also need to specify these in weights.
@@ -67,6 +80,10 @@ function HowToUse() {
         you need to know the density of the substance you're measuring, as the
         conversion depends on it. Try <a href="#">this</a> tool.
       </p>
+      <nav className="page-nav-buttons">
+        <PageNavButton path={-1} />
+        <PageNavButton path="/" title="home" />
+      </nav>
     </section>
   );
 }

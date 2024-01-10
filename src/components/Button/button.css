@@ -25,3 +25,17 @@
 button:not(.reset-list-btn):hover {
   opacity: 0.75;
 }
+
+.nav-btn {
+  background-color: var(--color-brand-primary);
+  color: var(--color-light);
+  font-size: var(--step-0);
+  width: 75px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  place-content: center;
+  & svg {
+    display: flex;
+    place-content: center;
+  }
+}

@@ -47,13 +47,15 @@
     "main main"
     "foot foot";
   grid-template-rows: 100px auto 1fr auto;
-  overflow-x: hidden; /*Quick fix, för att motverka horisontell scroll på sub 420px bp*/
 }
 
 body {
   background-color: var(--color-bg);
   font-family: var(--font-primary);
   /* line-height: 1.5; */
+
+  /*Quick fix, för att motverka horisontell scroll på sub 420px bp*/
+  overflow-x: hidden;
 }
 
 input,
@@ -91,7 +93,6 @@ button:not(.reset-list-btn):hover {
   color: var(--color-text);
   max-width: 65ch;
   margin-inline: auto;
-  margin-bottom: 8rem;
   padding: var(--step-0);
 }
 .page-title {
@@ -124,7 +125,7 @@ p.search-example {
   color: #2cb67d;
 }
 
-.page-aq {
+.page-note {
   max-width: 75%;
   margin-inline: auto;
   margin-block: 4rem;
@@ -154,4 +155,11 @@ p.search-example {
     color: var(--color-brand-secondary);
     font-size: 1.5rem;
   }
+}
+
+.page-nav-buttons {
+  margin-block: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }

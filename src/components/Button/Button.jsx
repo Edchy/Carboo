@@ -1,6 +1,9 @@
 import PropTypes from "prop-types";
 import "./button.css";
 import { forwardRef } from "react";
+import { useNavigate } from "react-router-dom";
+import { IoMdArrowRoundBack } from "react-icons/io";
+import { RiHome5Fill } from "react-icons/ri";
 
 // återanvändbar Knapp som tar children, onClick-funktion, class, och type som props
 
@@ -42,5 +45,20 @@ Button.propTypes = {
 };
 
 // jag skapade mitt projekt med CRA från början men bytte sedan framåt slutet till att köra Vite. Märkte då att ESLint började klaga på att jag inte använder propTypes överallt. Eftersom jag inte har tid att gå igenom och fixa detta så valde jag att stänga av detta i .eslintrc.cjs med "react/prop-types": "off" tills vidare.
+
+// exportera en knapp som tar en path och en title som props. När knappen klickas navigeras användaren till pathen.
+export function PageNavButton({ path, title = "back" }) {
+  const navigate = useNavigate();
+
+  function navigateTo() {
+    navigate(path);
+    window.scrollTo(0, 0);
+  }
+  return (
+    <button onClick={navigateTo} className="btn nav-btn">
+      {title === "home" ? <RiHome5Fill /> : <IoMdArrowRoundBack />}
+    </button>
+  );
+}
 
 export default Button;

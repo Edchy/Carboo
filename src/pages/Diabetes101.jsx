@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { IoSettingsOutline } from "react-icons/io5";
+import { PageNavButton } from "../components/Button/Button";
 
 function Diabetes101() {
   return (
@@ -20,7 +21,7 @@ function Diabetes101() {
         300-rule (for calculating how much is needed for breakfast-carbs) and
         the 100-rule (for calculating how much is needed to adjust a high BS).
       </p>
-      <div className="page-aq">
+      <div className="page-note">
         <p style={{ fontWeight: "bold", textAlign: "center" }}>
           Why is it different for breakfast?
         </p>
@@ -66,6 +67,10 @@ function Diabetes101() {
         carbohydrates with a sandwich or fruit (equivalent amount of
         carbohydrates not eaten) to avoid low blood sugar.
       </p>
+      <nav className="page-nav-buttons">
+        <PageNavButton path={-1} />
+        <PageNavButton path="/" title="home" />
+      </nav>
     </section>
   );
 }

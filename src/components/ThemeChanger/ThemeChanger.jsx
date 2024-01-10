@@ -3,10 +3,10 @@ import "./themechanger.css";
 import { useLocalStorage } from "../../customHooks/CustomHooks";
 // definierar mina temans olika färger för css-variabler
 const themes = {
-  carboo: {
+  barbie: {
     "-brand-primary": "HSL(180, 98%, 40%)",
     "-brand-primary-darker": "HSL(180, 98%, 30%)",
-    "-brand-secondary": "#FEBD16",
+    "-brand-secondary": "#F983C1",
     "-dark-700": "#333337",
     "-dark-500": "#232B2B",
     "-dark-300": "#666a70",
@@ -95,7 +95,7 @@ export default function ThemeChanger() {
       className="selectoooor"
       value={theme}
     >
-      <option value="carboo">Carboo 👻</option>
+      <option value="barbie">Barbie 💝</option>
       <option value="darkhorse">Darkhorse ♘</option>
       <option value="batman">Batman 🦹</option>
       <option value="buzz">Buzz 🧑‍🚀</option>
