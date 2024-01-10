@@ -3,7 +3,6 @@
   flex-direction: column;
   gap: 0.25rem;
   flex-wrap: wrap;
-  /* adjust PB */
   padding-bottom: 3rem;
 
   .empty-text {
@@ -14,7 +13,6 @@
 
   @media (max-width: 768px) {
     flex-direction: row;
-    /* justify-content: center; */
   }
 }
 
@@ -25,12 +23,9 @@
 @keyframes highlight {
   from {
     background-color: var(--color-brand-primary);
-    /* border-bottom: 1px solid var(--color-light); */
     transform: scale(1.05);
   }
   to {
-    /* background-color: transparent; */
-    /* border-bottom: none; */
     transform: scale(1);
   }
 }

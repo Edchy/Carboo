@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import Nutrient from "../Nutrient/Nutrient";
 import "./searchresults.css";

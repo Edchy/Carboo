@@ -2,15 +2,6 @@ aside {
   grid-area: aside;
   position: relative;
   background-color: var(--color-brand-primary);
-  /* background: linear-gradient(
-        90deg,
-        var(--color-brand-primary) 17px,
-        transparent 1%
-      )
-      50%,
-    linear-gradient(var(--color-brand-primary) 17px, transparent 1%) 50%,
-    var(--color-brand-secondary);
-  background-size: 18px 18px; */
   border-radius: var(--radius);
   padding: 1rem 3rem 1rem 1rem;
   display: flex;

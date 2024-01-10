@@ -9,8 +9,8 @@
   height: 80vh;
   padding-bottom: 0.25rem;
   overflow-y: scroll;
-  /* Tar bort scrollbars, UI cleanare :) UX sämre :( */
 
+  /* Tar bort scrollbars, UI cleanare :) UX sämre :( */
   /* -ms-overflow-style: none;
   scrollbar-width: none;
   &::-webkit-scrollbar {

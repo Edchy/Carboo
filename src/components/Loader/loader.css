@@ -1,4 +1,4 @@
-/* OBS: inte min kod. Hade såklart kunna göra en simplare egen variant, men tycker denna är så häftig så valde att modifiera och använde. All credit goes to... someone else */
+/* OBS: inte min kod. Hade såklart kunna göra en simplare egen variant, men tycker denna är så häftig så valde att modifiera och använda. All credit goes to... someone else */
 
 .container {
   position: relative;
@@ -58,7 +58,6 @@
   width: 20px;
   height: 20px;
   background: var(--color-brand-primary);
-  /* background: rgb(114, 28, 213); */
   border-radius: 50%;
   z-index: 100;
   box-shadow: 0 0 10px var(--color-brand-primary),

@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useKey } from "../../customHooks/CustomHooks";
 import { NavLink } from "react-router-dom";
 import Button from "../Button/Button";
@@ -39,7 +39,10 @@ export default function SlideUp({
 }) {
   const [isShowing, setIsShowing] = useState(false); // reglerar komponentens visibilitet
   const [speechBubbleText, setSpeechBubbleText] = useState(0); // reglerar vilken text som visas
-  //
+
+  // ref till knappen, så att jag kan ge focus till denna när slideUp visas
+  const closeBtnRef = useRef(null);
+
   // setTimeout är en side-effect och därför används useEffect hooken.
   // Efter en viss tid ändras state till true och komponenten blir synlig
   useEffect(() => {
@@ -48,13 +51,21 @@ export default function SlideUp({
         setIsShowing(true);
         setSpeechBubbleText(0);
         setSlideUpIsAlreadyShown(true);
-      }, 1000);
+      }, 5000);
+
       // Clean up - för att cleartimeout inte ska köras direkt, utan istället bara när komponenten unmountas (eller innan effekten körs igen om den har dependencies)
       return () => {
         clearTimeout(timer);
       };
     }
-  }, [setSlideUpIsAlreadyShown, slideUpIsAlreadyShown]);
+  }, [slideUpIsAlreadyShown, setSlideUpIsAlreadyShown, isShowing]);
+
+  // när komponenten mountas, ge focus till closeBtn
+  useEffect(() => {
+    if (isShowing && closeBtnRef.current) {
+      closeBtnRef.current.focus();
+    }
+  }, [isShowing]);
 
   //custom hook som låter användare trycka bort slideUp med esc. Lyssnar "globalt" efter tangentryck.
   useKey("escape", setIsShowing, isShowing);
@@ -74,17 +85,22 @@ export default function SlideUp({
   }, [isShowing, speechBubbleText]);
 
   return (
-    //class baserat på state
+    // försöker tänka på accessibility. role="dialog" och aria-modal="true" för att göra det tydligt att det är en dialogruta som dyker upp.
     <div
+      role="dialog"
+      aria-modal="true"
+      aria-label="Pop-up with information about how to use the app"
       className={`slide-up ${
-        isShowing ? "visible" : slideUpIsAlreadyShown ? "hide" : ""
+        isShowing ? "visible" : /*slideUpIsAlreadyShown ? "hide" : */ "" //Fixa detta!
       }`}
     >
       <div className={`speech-bubble ${isShowing ? "fade-in" : "fade-out"}`}>
         {/* rendera meddelande baserat på index i array */}
         {messages[speechBubbleText]}
         {speechBubbleText <= 3 && <span>(tap to continue...)</span>}
-        <Button onClick={() => setIsShowing(false)}>&times;</Button>
+        <Button ref={closeBtnRef} onClick={() => setIsShowing(false)}>
+          &times;
+        </Button>
         <div aria-hidden className="bubble-tip"></div>
       </div>
       <img src="slideUp.png" alt="a friendly ghost" />

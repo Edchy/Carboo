@@ -1,5 +1,4 @@
 .main-header {
-  /* color: var(--color-light); */
   grid-area: head;
   display: flex;
   align-items: center;

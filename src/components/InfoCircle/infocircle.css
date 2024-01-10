@@ -9,16 +9,13 @@
   align-items: center;
   justify-content: center;
   color: var(--color-brand-primary-darker);
-  /* color: var(--color-light); */
   width: 20px;
   aspect-ratio: 1;
   font-size: 1rem;
   border-radius: 50%;
-  /* border: 1px dotted rgba(255, 255, 255, 0.22); */
   text-align: center;
   cursor: pointer;
   position: absolute;
-  /* right: -24px; */
   .icon {
     font-size: 1.5rem;
   }
@@ -36,7 +33,6 @@
   width: 300px;
   position: absolute;
   top: 100%;
-  /* margin-left: 20px; */
   padding: 1rem 0.75rem 2rem;
   color: var(--color-dark-500);
   background-color: var(--color-light);
@@ -54,13 +50,11 @@
     color: var(--color-dark-700);
   }
   @media (max-width: 768px) {
-    /* left: -3000px; overridden by inline style in component */
     width: 200px;
   }
 }
 
 .info-circle:hover .infotext-box {
-  visibility: visible; /* Show on hover */
-  opacity: 1; /* Full opacity */
-  /* transition-delay: 0s; */
+  visibility: visible;
+  opacity: 1;
 }

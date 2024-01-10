@@ -47,6 +47,7 @@
     "main main"
     "foot foot";
   grid-template-rows: 100px auto 1fr auto;
+  overflow-x: hidden; /*Quick fix, för att motverka horisontell scroll på sub 420px bp*/
 }
 
 body {
@@ -100,7 +101,6 @@ button:not(.reset-list-btn):hover {
 .page p {
   margin-bottom: 1rem;
   line-height: 1.5;
-  /* font-size: var(--step-0); */
 }
 .page .page-subtitle {
   margin-top: -4px;
