@@ -86,12 +86,13 @@ export default function SlideUp({
 
   return (
     // försöker tänka på accessibility. role="dialog" och aria-modal="true" för att göra det tydligt att det är en dialogruta som dyker upp.
+
     <div
       role="dialog"
       aria-modal="true"
       aria-label="Pop-up with information about how to use the app"
       className={`slide-up ${
-        isShowing ? "visible" : /*slideUpIsAlreadyShown ? "hide" : */ "" //Fixa detta!
+        isShowing ? "visible" : /*slideUpIsAlreadyShown ? "hide" :*/ "" //Fixa detta!
       }`}
     >
       <div className={`speech-bubble ${isShowing ? "fade-in" : "fade-out"}`}>
@@ -103,8 +104,12 @@ export default function SlideUp({
         </Button>
         <div aria-hidden className="bubble-tip"></div>
       </div>
-      <img src="slideUp.png" alt="a friendly ghost" />
-      <ModalOverlay bool={isShowing} />
+      <img
+        src={`${import.meta.env.BASE_URL}slideUp.png`}
+        alt="a friendly ghost"
+      />
+      {/* overlay för att "dimma" bakgrunden */}
+      <ModalOverlay bool={isShowing} />{" "}
     </div>
   );
 }
