@@ -2,8 +2,19 @@
 import { MdPlaylistAddCircle } from "react-icons/md";
 import { PageNavButton } from "../components/Button/Button";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 function HowToUse() {
+  // från en av mina inline-länkar skickar jag med en hash som refererar till ett element på sidan (#conversion-info längre ner). Denna useEffect kollar om det finns en hash i url:en och scrollar till elementet om så är fallet.
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []);
   return (
     <section className="page">
       <h2 className="page-title">How to use 💁‍♂️</h2>
@@ -68,7 +79,7 @@ function HowToUse() {
           your dietary intake.
         </p>
       </div>
-      <p>
+      <p id="conversion-info">
         <strong>Also Note!</strong> If you want to add liquids to your meal (for
         example Milk🥛 or Fanta🥤), you also need to specify these in weights.
         For water💧 and most liquids similar to water in density, 1 gram is
@@ -80,6 +91,11 @@ function HowToUse() {
         you need to know the density of the substance you're measuring, as the
         conversion depends on it. Try <a href="#">this</a> tool.
       </p>
+      <img
+        width="300px"
+        src={`${import.meta.env.BASE_URL}carboo.png`}
+        alt="a cartoon friendly-looking ghost"
+      />
       <nav className="page-nav-buttons">
         <PageNavButton path={-1} />
         <PageNavButton path="/" title="home" />

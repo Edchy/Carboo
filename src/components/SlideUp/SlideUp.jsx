@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 import { useEffect, useRef, useState } from "react";
 import { useKey } from "../../customHooks/CustomHooks";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import ModalOverlay from "../ModalOverlay/ModalOverlay";
 import "./slideup.css";
@@ -15,20 +15,27 @@ const messages = [
       👻.
     </p>
   </>,
-  <p>
-    Just type in the delicious stuff that you are about to eat or drink in the
-    search-bar above, and hit <strong>enter</strong>.<br /> You may search for
-    multiple items all at once, like this: <em>apple milk bread fanta...</em>
-  </p>,
-  <p>
+  <>
     {" "}
-    You may also directly specify the weight of your foods like this: <br />{" "}
-    <em>100g pasta 1lb beef 1oz onion</em>
-  </p>,
+    <p>
+      Just type in the delicious stuff that you are about to eat or drink in the
+      search-bar above, and hit search or <strong>enter</strong>.<br /> You may
+      search for multiple items all at once, like this:{" "}
+    </p>
+    <p className="example">pizza coke banana cream</p>
+  </>,
+  <>
+    <p>
+      {" "}
+      You may also directly specify the weight of your foods like this: <br />{" "}
+    </p>
+    <p className="example">100g pasta 1lb beef 1oz onion</p>
+  </>,
   <p>
     <strong>Note</strong> that only weight measurements are supported, not
     volume measurements like l, mL, cups, fl oz, etc. For converting from volume
-    to weight, click <NavLink to="/howtouse">here</NavLink>.
+    to weight, click <Link to="/howtouse#conversion-info">here</Link>.{" "}
+    {/* skickar med en hash via länken */}
   </p>,
   <p>boo</p>,
 ];

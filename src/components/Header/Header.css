@@ -5,7 +5,7 @@
   border-radius: var(--radius);
   background-color: var(--color-bg);
   padding-inline: clamp(0.3125rem, 0.0284rem + 1.2121vw, 0.9375rem);
-
+  border-bottom: 0.5px solid var(--color-brand-primary);
   color: var(--color-text);
 }
 
@@ -14,11 +14,11 @@
   align-items: center;
 
   & h1 {
-    margin-left: -16px;
+    margin-left: -1rem;
   }
   & h1,
   span {
-    font-size: var(--step-5);
+    font-size: var(--step-4);
     line-height: 0.75;
     font-family: var(--font-brand);
     text-transform: uppercase;
@@ -27,14 +27,14 @@
     color: var(--color-brand-primary);
   }
   & p {
-    font-size: var(--step--2);
+    font-size: var(--step--1);
     margin-left: -10px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: var(--color-brand-primary);
+    @media (max-width: 768px) {
+      font-size: 11px;
+    }
   }
   & img {
-    width: 100px;
+    width: 90px;
     z-index: 10;
 
     @media (max-width: 768px) {
@@ -64,7 +64,7 @@
   .nav-list {
     display: flex;
     list-style: none;
-    font-size: var(--step--1);
+    font-size: 13px;
     font-weight: bold;
     text-transform: uppercase;
 

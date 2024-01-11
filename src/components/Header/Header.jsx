@@ -24,10 +24,7 @@ export default function Header({
       <nav role="navigation" aria-label="Main Navigation" className="main-nav">
         <Link className="home-link" to="/">
           <div className="main-logo">
-            <img
-              src={`${import.meta.env.BASE_URL}brandlogo.png`}
-              alt="site logo"
-            />
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="site logo" />
             <div>
               <h1>
                 arb

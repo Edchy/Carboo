@@ -52,6 +52,7 @@ export function PageNavButton({ path, title = "back" }) {
 
   function navigateTo() {
     navigate(path);
+    // scrolla till toppen av sidan
     window.scrollTo(0, 0);
   }
   return (

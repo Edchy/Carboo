@@ -67,6 +67,11 @@ function Diabetes101() {
         carbohydrates with a sandwich or fruit (equivalent amount of
         carbohydrates not eaten) to avoid low blood sugar.
       </p>
+      <img
+        width="300px"
+        src={`${import.meta.env.BASE_URL}carboo.png`}
+        alt="a cartoon friendly-looking ghost"
+      />
       <nav className="page-nav-buttons">
         <PageNavButton path={-1} />
         <PageNavButton path="/" title="home" />

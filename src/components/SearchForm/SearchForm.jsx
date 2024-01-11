@@ -12,7 +12,7 @@ export default function SearchForm({ onQuickAdd, onSubmit, query, setQuery }) {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         type="text"
-        placeholder="Search for food or drink..."
+        placeholder="Search food or drink..."
       />
       <div className="form-buttons">
         <Button className="search-btn primary-btn" type="submit">

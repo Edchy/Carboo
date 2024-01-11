@@ -30,7 +30,9 @@ export default function Footer() {
           </ul>
         </div>
       </nav>
-      <h2>You got this!</h2>
+      <div>
+        <h2>You got this!</h2>
+      </div>
     </footer>
   );
 }
