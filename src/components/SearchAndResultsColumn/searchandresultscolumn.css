@@ -20,4 +20,8 @@
   @media (max-width: 768px) {
     height: 60vh;
   }
+  @media (max-width: 468px) {
+    border-end-end-radius: 0;
+    border-end-start-radius: 0;
+  }
 }

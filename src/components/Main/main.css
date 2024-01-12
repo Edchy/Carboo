@@ -8,5 +8,9 @@
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 1px;
+  }
+  @media (max-width: 468px) {
+    padding-inline: 0;
   }
 }
