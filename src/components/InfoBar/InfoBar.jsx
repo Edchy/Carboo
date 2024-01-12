@@ -72,7 +72,8 @@ export default function InfoBar({
       <InfoCircle
         direction="right"
         offset={-24}
-        boxdirecion="left"
+        boxdirecion="right"
+        boxOffset="-100px"
         emoji="☀️"
         component={
           <label>

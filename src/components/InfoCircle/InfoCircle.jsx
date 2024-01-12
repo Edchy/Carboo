@@ -10,6 +10,7 @@ export default function InfoCircle({
   direction = "right",
   offset,
   boxdirecion = "left",
+  boxOffset = "100%",
   icon = <FiInfo />,
 }) {
   return (
@@ -20,7 +21,7 @@ export default function InfoCircle({
         className="info-circle"
       >
         {icon}
-        <div style={{ [boxdirecion]: "100%" }} className="infotext-box">
+        <div style={{ [boxdirecion]: boxOffset }} className="infotext-box">
           <h4>
             <span className="icon">
               <TbGhost2 />

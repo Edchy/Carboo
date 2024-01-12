@@ -1,5 +1,5 @@
 @import url("https://api.fontshare.com/v2/css?f[]=nunito@900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,700;1,400&family=Fira+Sans+Extra+Condensed&display=swap");
 :root {
   --color-dark-700: #16161a;
   --color-dark-500: #333337;
@@ -15,6 +15,7 @@
   --radius: 0.5rem;
   --font-brand: "Nunito", sans-serif;
   --font-primary: "Figtree", sans-serif;
+  --font-secondary: "Fira Sans Extra Condensed", sans-serif;
   /* Fluid font sizing, genererad på: */
   /* https://utopia.fyi/type/calculator?c=375,16,1.25,1200,18,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l|3xs-xs&g=s,l,xl,12 */
   --step--3: clamp(0.5763rem, 0.5799rem + -0.0048vw, 0.5788rem);

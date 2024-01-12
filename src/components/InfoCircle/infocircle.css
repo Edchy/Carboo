@@ -16,6 +16,7 @@
   text-align: center;
   cursor: pointer;
   position: absolute;
+
   .icon {
     font-size: 1.5rem;
   }
@@ -32,7 +33,7 @@
   transition: visibility 0s, opacity 0.5s ease-in-out;
   width: 300px;
   position: absolute;
-  top: 100%;
+  top: 200%;
   padding: 1rem 0.75rem 2rem;
   color: var(--color-dark-500);
   background-color: var(--color-light);

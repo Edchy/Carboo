@@ -15,6 +15,9 @@
 
   & h1 {
     margin-left: -1rem;
+    @media (max-width: 768px) {
+      margin-left: -0.75rem;
+    }
   }
   & h1,
   span {
@@ -29,8 +32,9 @@
   & p {
     font-size: var(--step--1);
     margin-left: -10px;
+    font-family: var(--font-secondary);
     @media (max-width: 768px) {
-      font-size: 11px;
+      font-size: 13px;
     }
   }
   & img {
@@ -38,7 +42,7 @@
     z-index: 10;
 
     @media (max-width: 768px) {
-      width: 80px;
+      width: 70px;
     }
   }
 }
@@ -64,9 +68,11 @@
   .nav-list {
     display: flex;
     list-style: none;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
+    font-family: var(--font-secondary);
+    letter-spacing: 0.5px;
 
     & > li:not(:last-child) {
       margin-right: 4rem;
