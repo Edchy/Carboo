@@ -3,8 +3,9 @@ import { MdPlaylistAddCircle } from "react-icons/md";
 import { PageNavButton } from "../components/Button/Button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
-function HowToUse() {
+function HowToUse({ pageTitle }) {
   // från en av mina inline-länkar skickar jag med en hash som refererar till ett element på sidan (#conversion-info längre ner). Denna useEffect kollar om det finns en hash i url:en och scrollar till elementet om så är fallet.
   useEffect(() => {
     const hash = window.location.hash;
@@ -17,6 +18,9 @@ function HowToUse() {
   }, []);
   return (
     <section className="page">
+      <Helmet>
+        <title>{pageTitle}</title>
+      </Helmet>
       <h2 className="page-title">How to use 💁‍♂️</h2>
       <p className="page-subtitle">Step-by-step instructions</p>
       <p>

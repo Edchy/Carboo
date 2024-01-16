@@ -1,10 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import { IoSettingsOutline } from "react-icons/io5";
 import { PageNavButton } from "../components/Button/Button";
+import Helmet from "react-helmet";
 
-function Diabetes101() {
+function Diabetes101({ pageTitle }) {
   return (
     <section className="page">
+      <Helmet>
+        <title>{pageTitle}</title>
+      </Helmet>
       <h2 className="page-title">Diabetes 101</h2>
       <p className="page-subtitle">The basics</p>
       <p>

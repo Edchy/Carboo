@@ -1,9 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
+import { Helmet } from "react-helmet";
 import { PageNavButton } from "../components/Button/Button";
 
-function Ketones() {
+function Ketones({ pageTitle }) {
   return (
     <section className="page">
+      {/* skicka med pageTitle som prop till varje "page" och använda komponenten react-helmet för att dynamiskt ändra titel på varje sida */}
+      <Helmet>
+        <title>{pageTitle}</title>
+      </Helmet>{" "}
       <h2 className="page-title">What are ketones?</h2>
       <p className="page-subtitle">And why you should avoid them</p>
       <p>

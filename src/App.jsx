@@ -49,9 +49,15 @@ function App() {
               />
             }
           />
-          <Route path="ketones" element={<Ketones />} />
-          <Route path="howtouse" element={<HowToUse />} />
-          <Route path="diabetes101" element={<Diabetes101 />} />
+          <Route path="ketones" element={<Ketones pageTitle="Ketones" />} />
+          <Route
+            path="howtouse"
+            element={<HowToUse pageTitle="How to use" />}
+          />
+          <Route
+            path="diabetes101"
+            element={<Diabetes101 pageTitle="Diabetes 101" />}
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

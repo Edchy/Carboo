@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useLocalStorage } from "../customHooks/CustomHooks";
 import InfoBar from "../components/InfoBar/InfoBar";
 import Main from "../components/Main/Main";
+import { Helmet } from "react-helmet";
 
 export default function Home({
   idealBs,
@@ -21,6 +22,9 @@ export default function Home({
 
   return (
     <>
+      <Helmet>
+        <title>Carboo</title>
+      </Helmet>
       <InfoBar
         setBloodSugar={setBloodSugar}
         bloodSugar={bloodSugar}
