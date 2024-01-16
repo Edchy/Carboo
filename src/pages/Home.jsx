@@ -23,7 +23,7 @@ export default function Home({
   return (
     <>
       <Helmet>
-        <title>Carboo</title>
+        <title>Carboo - Counting carbs should not be scary</title>
       </Helmet>
       <InfoBar
         setBloodSugar={setBloodSugar}
