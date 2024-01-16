@@ -24,7 +24,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter basename="/Carboo">
+      <BrowserRouter basename="/Carboo/">
         <Header
           ruleOf100={ruleOf100}
           ruleOf300={ruleOf300}
