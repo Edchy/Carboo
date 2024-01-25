@@ -57,7 +57,7 @@ const themes = {
     "-dark-700": "black",
     "-light": "#ffe9f9",
     "-bg": "#0f375e",
-    "-text": "#fff",
+    "-text": "#ffe9f9",
   },
   oj: {
     "-brand-primary": "HSL(17, 97%, 57%)",
@@ -68,7 +68,7 @@ const themes = {
     "-dark-700": "#682b18",
     "-light": "#ffe9f9",
     "-bg": "#1f201f",
-    "-text": "#ff9b36",
+    "-text": "#ffe9f9",
   },
 };
 export default function ThemeChanger() {
