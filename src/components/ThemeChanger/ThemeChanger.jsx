@@ -57,7 +57,7 @@ const themes = {
     "-dark-700": "black",
     "-light": "#ffe9f9",
     "-bg": "#0f375e",
-    "-text": "#ffe9f9",
+    "-text": "#fff",
   },
   oj: {
     "-brand-primary": "HSL(17, 97%, 57%)",

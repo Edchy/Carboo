@@ -56,8 +56,8 @@ export default function InfoBar({
       >
         <p>
           By entering your current bloodsugar (BS) here, Carboo will let you
-          know how much extra insuling is needed to get you down to your ideal
-          BS <strong>{idealBs}</strong> (you can change this in{" "}
+          know how much extra insulin is needed to get you down to your ideal BS{" "}
+          <strong>{idealBs}</strong> (you can change this in{" "}
           <em>
             the settings <IoSettingsOutline /> in the top right corner.
           </em>
