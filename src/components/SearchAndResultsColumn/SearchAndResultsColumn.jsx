@@ -30,7 +30,7 @@ export default function SearchAndResultsColumn({ onAdd, setUserList }) {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          "X-Api-Key": "OnOOnBzJskNHQToKj+jVlg==7c0VISHeXUUmy9Sz",
+          "X-Api-Key": import.meta.env.VITE_API_KEY,
         },
       });
       // Kasta ny error om response INTE är OK.
