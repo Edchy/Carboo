@@ -6,15 +6,17 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import "./searchandresultscolumn.css";
 
 export default function SearchAndResultsColumn({ onAdd, setUserList }) {
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState(null);
   const [fetchError, setFetchError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [query, setQuery] = useState("");
+
   // searched skickas ner som prop till till searchResultsList. Agerar boolean för om komponenten ErrorMessage ska renderars eller ej (conditional rendering). Sätts till true när funktionen handleSubmit körs. Hela syftet här är att endast rendera ErrorMessage komponenten efter att man gjort en sökning och inte initialt när sidan har laddats. En lösning som visserligen fungerar men som kanske skulle kunna göras på ett enklare sätt.
 
   // insåg att det räcker med en vanlig variabel här (använde state från början).
   // const [searched, setSearched] = useState(false);
-  let searched = false;
+
+  // let searched = false;
 
   // Hämtadata funktionen deklareras
   async function getData(q) {
@@ -70,7 +72,7 @@ export default function SearchAndResultsColumn({ onAdd, setUserList }) {
     }
     setQuery("");
     // setSearched(true); // som sagt, behövs nog inte state här.
-    searched = true;
+    // searched = true;
   }
   return (
     <section className="search-results-box">
@@ -88,7 +90,7 @@ export default function SearchAndResultsColumn({ onAdd, setUserList }) {
         <SearchResultsList
           onAdd={onAdd}
           searchResults={searchResults}
-          searched={searched}
+          // searched={searched}
         />
       )}
     </section>

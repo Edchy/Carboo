@@ -6,6 +6,8 @@ import Button from "../Button/Button";
 import ModalOverlay from "../ModalOverlay/ModalOverlay";
 import "./slideup.css";
 
+import { useLocalStorage } from "../../customHooks/CustomHooks";
+
 // texten i pratbubblan. plockas ut per index.
 const messages = [
   <>
@@ -40,10 +42,11 @@ const messages = [
   <p>boo</p>,
 ];
 
-export default function SlideUp({
-  slideUpIsAlreadyShown,
-  setSlideUpIsAlreadyShown,
-}) {
+export default function SlideUp() {
+  const [slideUpIsAlreadyShown, setSlideUpIsAlreadyShown] = useLocalStorage(
+    false,
+    "slideUpIsAlreadyShown"
+  );
   const [isShowing, setIsShowing] = useState(false); // reglerar komponentens visibilitet
   const [speechBubbleText, setSpeechBubbleText] = useState(0); // reglerar vilken text som visas
 

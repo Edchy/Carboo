@@ -9,6 +9,8 @@
   height: 80vh;
   overflow-y: scroll;
 
+  /* scrollbar-gutter: stable; */
+
   /* Tar bort scrollbars, UI cleanare :) UX sämre :( */
   /* -ms-overflow-style: none;
   scrollbar-width: none;

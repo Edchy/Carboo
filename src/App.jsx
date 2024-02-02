@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useLocalStorage } from "./customHooks/CustomHooks";
 import Ketones from "./pages/Ketones";
@@ -16,7 +16,9 @@ function App() {
 
   // state för om slideUp ska visas eller inte. behöver finnas här då denna komponent inte re-rendras efter route-byten. tanken är att slide-up ska visas en gång per "session". Men ur ett UX-perspektiv är det egentlgen svårt att få till en sån här sak på ett bra sätt utan att irritera användaren. Som det ser ut nu så kommer slideUp visas varje gång sidan reloadas, så varje besök. för en flitig användare av sidan är detta långt ifrån optimalt. En bättre lösning kanske hade varit att spara state i localstorage så att den "persistar". men då kommer den aldrig visas igen. svår balansgång.
   // skickas ner till slideUp-komponenten där state sätts till true i en useEffect.
-  const [slideUpIsAlreadyShown, setSlideUpIsAlreadyShown] = useState(false);
+
+  // *deprecated* använder nu localstoragehook istället
+  // const [slideUpIsAlreadyShown, setSlideUpIsAlreadyShown] = useState(false);
 
   const [ruleOf100, setRuleOf100] = useLocalStorage(100, "ruleof100");
   const [ruleOf300, setRuleOf300] = useLocalStorage(300, "ruleof300");
@@ -40,8 +42,8 @@ function App() {
             path="/"
             element={
               <Home
-                slideUpIsAlreadyShown={slideUpIsAlreadyShown}
-                setSlideUpIsAlreadyShown={setSlideUpIsAlreadyShown}
+                // slideUpIsAlreadyShown={slideUpIsAlreadyShown}
+                // setSlideUpIsAlreadyShown={setSlideUpIsAlreadyShown}
                 idealBs={idealBs}
                 ruleOf100={ruleOf100}
                 ruleOf300={ruleOf300}

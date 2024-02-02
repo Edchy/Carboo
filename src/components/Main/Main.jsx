@@ -10,8 +10,8 @@ export default function Main({
   dailyInsulin,
   isBreakfastToggled,
   idealBs,
-  slideUpIsAlreadyShown,
-  setSlideUpIsAlreadyShown,
+  // slideUpIsAlreadyShown,
+  // setSlideUpIsAlreadyShown,
   ruleOf100,
   ruleOf300,
   ruleOf500,
@@ -69,8 +69,8 @@ export default function Main({
         ruleOf500={ruleOf500}
       />
       <SlideUp
-        slideUpIsAlreadyShown={slideUpIsAlreadyShown}
-        setSlideUpIsAlreadyShown={setSlideUpIsAlreadyShown}
+      // slideUpIsAlreadyShown={slideUpIsAlreadyShown}
+      // setSlideUpIsAlreadyShown={setSlideUpIsAlreadyShown}
       />
     </main>
   );
